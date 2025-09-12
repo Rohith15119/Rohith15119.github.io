@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home - TechLearn</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="logo" href="./index.html">TechLearn</a>
+  <nav class="nav-links" aria-label="Main Navigation">
+    <a href="./index.html">Home</a>
+    <a href="./courses.html">Courses</a>
+    <a href="./about.html">About</a>
+    <a href="./contact.html">Contact</a>
+    <a href="./feedback.html">Feedback</a>
+  </nav>
+  <div class="nav-actions">
+    <div id="cartToggle" class="cart-icon" title="View cart" role="button" tabindex="0" aria-label="Cart">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cart-badge" class="cart-badge">0</span>
+    </div>
+    <a id="loginLink" class="user-link" href="./login.html">Login</a>
+  </div>
+</header>
+<main class='container'><section class='hero'><div class='hero-left'><h1>Learn the skills employers want</h1><p>Project-based courses, expert instructors, and career resources.</p><a class='btn primary' href='./courses.html'>Browse Courses</a></div><div class='hero-right'><img src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1500&q=80' alt='Hero'></div></section><section class='container'><h2 class='section-title'>Featured Courses</h2><div class='grid'><article class='card' data-course='{"title": "Full-Stack Web Development", "duration": "12 Weeks", "rating": "4.9", "desc": "Full-Stack Web Development course."}'><img src='https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1350&q=80' alt='Full-Stack Web Development'><div class='card-body'><h3>Full-Stack Web Development</h3><p class='meta'>12 Weeks • 4.9 ★</p><span class='price'>Price: $129</span><div class='card-actions'><button class='btn outline details-btn'>Details</button><button class='btn primary enroll-btn' data-course='Full-Stack Web Development' data-price='129' data-img='https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1350&q=80'>Enroll</button><button class='btn outline add-to-cart' data-course='Full-Stack Web Development' data-price='129' data-img='https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1350&q=80'>Add to cart</button></div></div></article><article class='card' data-course='{"title": "Python Programming", "duration": "6 Weeks", "rating": "4.8", "desc": "Python Programming course."}'><img src='https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80' alt='Python Programming'><div class='card-body'><h3>Python Programming</h3><p class='meta'>6 Weeks • 4.8 ★</p><span class='price'>Price: $79</span><div class='card-actions'><button class='btn outline details-btn'>Details</button><button class='btn primary enroll-btn' data-course='Python Programming' data-price='79' data-img='https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80'>Enroll</button><button class='btn outline add-to-cart' data-course='Python Programming' data-price='79' data-img='https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80'>Add to cart</button></div></div></article><article class='card' data-course='{"title": "UI/UX Design", "duration": "5 Weeks", "rating": "4.6", "desc": "UI/UX Design course."}'><img src='https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80' alt='UI/UX Design'><div class='card-body'><h3>UI/UX Design</h3><p class='meta'>5 Weeks • 4.6 ★</p><span class='price'>Price: $79</span><div class='card-actions'><button class='btn outline details-btn'>Details</button><button class='btn primary enroll-btn' data-course='UI/UX Design' data-price='79' data-img='https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80'>Enroll</button><button class='btn outline add-to-cart' data-course='UI/UX Design' data-price='79' data-img='https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80'>Add to cart</button></div></div></article></div></section></main>
+
+<div id='modal' class='modal' aria-hidden='true'>
+  <div class='modal-content'>
+    <button class='modal-close' aria-label='Close'>&times;</button>
+    <h3 id='modal-title'>Title</h3>
+    <p id='modal-desc'></p>
+    <p id='modal-meta' class='meta'></p>
+    <div style='margin-top:0.8rem'><button class='btn primary enroll-now'>Enroll Now</button><button class='btn outline modal-close'>Close</button></div>
+  </div>
+</div>
+<div id='cartModal' class='modal cart-modal' aria-hidden='true'>
+  <div class='modal-content'>
+    <button class='modal-close' aria-label='Close cart'>&times;</button>
+    <h3 id='cart-title'>Your Cart</h3>
+    <div id='cartItems' style='margin-top:1rem'></div>
+    <div style='margin-top:1rem;display:flex;justify-content:space-between;align-items:center'><div style='font-weight:700'>Total</div><div><button id='checkoutBtn' class='btn primary'>Checkout</button></div></div>
+  </div>
+</div>
+<button id='scroll-top' class='scroll-top' style='display:none;position:fixed;right:1rem;bottom:1rem;width:44px;height:44px;border-radius:8px;background:var(--primary);color:#fff;border:0;align-items:center;justify-content:center'><i class='fas fa-chevron-up'></i></button>
+
+
+<footer class="footer"><div class="footer-inner"><div><h4>TechLearn</h4><p>Practical tech courses, hands-on projects, and mentorship.</p></div><div><h4>Quick Links</h4><a href='./courses.html'>Courses</a><br><a href='./about.html'>About</a><br><a href='./contact.html'>Contact</a></div><div><h4>Follow</h4><div class='socials'><a href='#'><i class='fab fa-facebook'></i></a> <a href='#'><i class='fab fa-twitter'></i></a> <a href='#'><i class='fab fa-linkedin'></i></a></div></div></div><div class='footer-bottom'>© 2025 TechLearn · All rights reserved</div></footer>
+<script src='./js/script.js'></script>
+</body></html>
