@@ -1,4 +1,4 @@
-# TechLearn - Final Production Build
+# 🚀 TechLearn – Knowledge at Full Power
 
 This is the final production-ready static site for TechLearn.
 Open `index.html` in your browser to run locally (no server required).
